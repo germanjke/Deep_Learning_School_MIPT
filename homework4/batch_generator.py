@@ -2,7 +2,6 @@ def batch_generator(X, y, batch_size):
     np.random.seed(42)
     perm = np.random.permutation(len(X))
     
-    # YOUR CODE
     num_batches = math.ceil(len(X)/batch_size) # кол-во батчей, округляем до целого сверху
     for i in range(num_batches): 
         if i == (num_batches - 1): #случай для последнего батча, заполняем всем, что есть
